@@ -39,6 +39,7 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
           controllers: [_controller],
           // Update the play state when the widget's initialized
           onInit: (_) => setState(() {}),
+          fit: BoxFit.cover,
         ),
       ),
       floatingActionButton: FloatingActionButton(
