@@ -12,7 +12,7 @@ import 'package:rive_flutter_example/state_machine_skills.dart';
 import 'package:rive_flutter_example/carousel.dart';
 
 void main() => runApp(MaterialApp(
-      title: 'Navigation Basics',
+      title: 'Rive Flutter - Navigation Basics',
       home: Home(),
     ));
 
