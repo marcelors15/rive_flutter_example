@@ -43,22 +43,36 @@ class _AnimationCarouselState extends State<AnimationCarousel> {
         title: const Text('Animation Carousel'),
       ),
       body: Center(
-          child: Row(children: [
-        GestureDetector(
-            onTap: previous,
-            child: const Icon(
-              Icons.arrow_back,
-            )),
-        Expanded(
-            child: RiveAnimation.asset(
-          riveFiles[_index % riveFiles.length],
-        )),
-        GestureDetector(
-            onTap: next,
-            child: const Icon(
-              Icons.arrow_forward,
-            )),
-      ])),
+        child: Row(
+          children: [
+            /*GestureDetector(
+              onTap: previous,
+              child: const Icon(Icons.arrow_back),
+            ),*/
+            IconButton(
+              onPressed: previous,
+              icon: const Icon(
+                Icons.arrow_back,
+              ),
+            ),
+            Expanded(
+              child: RiveAnimation.asset(
+                riveFiles[_index % riveFiles.length],
+              ),
+            ),
+            IconButton(
+              onPressed: next,
+              icon: const Icon(
+                Icons.arrow_forward,
+              ),
+            ),
+            /*GestureDetector(
+              onTap: next,
+              child: const Icon(Icons.arrow_forward),
+            ),*/
+          ],
+        ),
+      ),
     );
   }
 }
